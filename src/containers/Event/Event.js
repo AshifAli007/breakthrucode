@@ -8,6 +8,10 @@ import lvl1b from '../../assets/level1b.png';
 import lvl2b from '../../assets/level2b.pdf';
 import lvl3b from '../../assets/level3b.pdf';
 
+
+import 'boxicons';
+import giraffe from '../../assets/giraffe.png'
+import bird from '../../assets/bird.png';
 import styles from './Event.module.css';
 import $ from 'jquery';
 import keywords from '../../config/index.json';
@@ -106,45 +110,66 @@ class Event extends Component{
         const dismissAlert = ()=>{
             $('#alert').css('display', 'none');
         }
+        const showRules = ()=>{
+
+        }
         window.onclick = function(event) {
             if (event.target === document.getElementById('myModal')) {
                 $('#myModal').css('display', 'none');
             }
           }
         return (
-            <div id='main'>
-                <div id="alert" className={styles.alert}>
-                {this.state.status}
-                <button type="button" onClick={dismissAlert}>
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-             <div id="myModal" className={styles.modal}>
-                    <div className={styles.modalContent}>
-                    <span onClick={closeModal} className={styles.close}>&times;</span>
-                    <p>Complete Previous Levels to Unlock this level.</p>
+            <div id='main' className={styles.main}>
+                    
+                <div className={styles.pathA}>
+                <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#81958f' ></box-icon>
+                    <div id="alert" className={styles.alert}>
+                    {this.state.status}
+                    <button type="button" onClick={dismissAlert}>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     </div>
+                    <div id="myModal" className={styles.modal}>
+                        <div className={styles.modalContent}>
+                        <span onClick={closeModal} className={styles.close}>&times;</span>
+                        <p>Complete Previous Levels to Unlock this level.</p>
+                        </div>
 
                     </div>
-                <h2>Path 1</h2>
-                <button class="lvl" value="lvl1a" onClick={downloadPDF} >LVL 1</button>
-                <button class="lvl" value="lvl2a" onClick={downloadPDF} >LVL 2</button>
-                <button class="lvl" value="lvl3a" onClick={downloadPDF} >LVL 3</button>
-                <button class="lvl" value="lvl4a" onClick={downloadPDF} >LVL 4</button>
+                    <h2 className={styles.headingPathA}>Path 1</h2>
+                    <button className={styles.level} value="lvl1a" onClick={downloadPDF} >LVL 1</button>
+                    <button className={styles.level} value="lvl2a" onClick={downloadPDF} >LVL 2</button>
+                    <button className={styles.level} value="lvl3a" onClick={downloadPDF} >LVL 3</button>
+                    <button className={styles.level} value="lvl4a" onClick={downloadPDF} >LVL 4</button>
+                </div>
+                <div class={styles.pathB}>
+                    <h2 className={styles.headingPathB}>Path 2</h2>
+
+                    {/* <img className={styles.giraffe} src={giraffe} alt="Girl in a jacket"/> */}
+                    <div className={styles.allLevels}>
+                        <button className={styles.level} value="lvl1b" onClick={downloadPDF} >LVL 1</button>
+                        <button className={styles.level} value="lvl2b" onClick={downloadPDF} >LVL 2</button>
+                        <button className={styles.level} value="lvl3b" onClick={downloadPDF} >LVL 3</button>
+                        <button className={styles.level} value="lvl4b" onClick={downloadPDF} >LVL 4</button>
+                    </div>
+
+                    {/* <img className={styles.bird} src={bird} alt="Girl in a jacket"/> */}
+
+
+
+
+                </div>
+                <div className={styles.float}>
+                        <h2>Enter Keywords Here</h2>
+                        <input id='keyword' type="text" onChange={checkKeyword} placeholder="Enter Your Keyword to unlock next level"></input>
+                        <div id="keywordStatus">
+
+                        </div>
+                        <div id='unlockButton' className={styles.unlock}>
+                            <button onClick={unlockLevel} >Unlock Next Level</button>
+                        </div>
+                    </div>
                 
-                <h2>Path 2</h2>
-                <button class="lvl" value="lvl1b" onClick={downloadPDF} >LVL 1</button>
-                <button class="lvl" value="lvl2b" onClick={downloadPDF} >LVL 2</button>
-                <button class="lvl" value="lvl3b" onClick={downloadPDF} >LVL 3</button>
-                <button class="lvl" value="lvl4b" onClick={downloadPDF} >LVL 4</button>
-                <h2>Enter Keywords Here</h2>
-                <input id='keyword' type="text" onChange={checkKeyword} placeholder="Enter Your Keyword to unlock next level"></input>
-                <div id="keywordStatus">
-
-                </div>
-                <div id='unlockButton' className={styles.unlock}>
-                    <button onClick={unlockLevel} >Unlock Next Level</button>
-                </div>
             </div>
         )
     }
