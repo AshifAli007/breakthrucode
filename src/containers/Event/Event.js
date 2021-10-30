@@ -17,9 +17,13 @@ import $ from 'jquery';
 import keywords from '../../config/index.json';
 class Event extends Component{
     state = {
-        status: "",
+        status: "Well Done! Bro you did it keep goingyou jsut unlocked next level",
+        showRules: false,
     }
     render(){
+        
+            
+        
         let userData = localStorage.getItem('userData');
         console.log(keywords);
         if(!userData){
@@ -65,7 +69,7 @@ class Event extends Component{
         const checkKeyword = (e)=>{
             if(e.target.value in keywords){
                 console.log('hey there');
-                $("#unlockButton").css('display', 'block');
+                $("#unlockButton").css('display', 'flex');
                 $("#keywordStatus").html("Nice this is the keyword");
             }else{
                 console.log('try again');
@@ -105,13 +109,19 @@ class Event extends Component{
             clearInput();
         }
         const showAlert = ()=>{
-            $('#alert').css('display', 'block');
+            $('#alert').animate({'width':'90%'}, 300, "swing" );
         }
         const dismissAlert = ()=>{
-            $('#alert').css('display', 'none');
+            $('#alert').animate({'width':'0'}, 300, "swing" );
         }
         const showRules = ()=>{
-
+            if(this.state.showRules){
+                $('#rules').animate({top: "-85%"}, 300, "swing");
+                this.setState({showRules: false});
+            }else{
+                $('#rules').animate({top: "0"}, 300, "swing");
+                this.setState({showRules: true});
+            }
         }
         window.onclick = function(event) {
             if (event.target === document.getElementById('myModal')) {
@@ -120,15 +130,12 @@ class Event extends Component{
           }
         return (
             <div id='main' className={styles.main}>
-                    
+                <div id="rules" className={styles.rules}>
+                    <h1>Instructions</h1>
+                </div>
                 <div className={styles.pathA}>
-                <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#81958f' ></box-icon>
-                    <div id="alert" className={styles.alert}>
-                    {this.state.status}
-                    <button type="button" onClick={dismissAlert}>
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
+                    <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#81958f' ></box-icon>
+                  
                     <div id="myModal" className={styles.modal}>
                         <div className={styles.modalContent}>
                         <span onClick={closeModal} className={styles.close}>&times;</span>
@@ -136,39 +143,44 @@ class Event extends Component{
                         </div>
 
                     </div>
-                    <h2 className={styles.headingPathA}>Path 1</h2>
+                    <h2 className={styles.headingPathA}>Path A</h2>
                     <button className={styles.level} value="lvl1a" onClick={downloadPDF} >LVL 1</button>
                     <button className={styles.level} value="lvl2a" onClick={downloadPDF} >LVL 2</button>
                     <button className={styles.level} value="lvl3a" onClick={downloadPDF} >LVL 3</button>
                     <button className={styles.level} value="lvl4a" onClick={downloadPDF} >LVL 4</button>
                 </div>
                 <div class={styles.pathB}>
-                    <h2 className={styles.headingPathB}>Path 2</h2>
+                    {/* <h2 className={styles.headingPathB}>Path B</h2> */}
 
                     {/* <img className={styles.giraffe} src={giraffe} alt="Girl in a jacket"/> */}
-                    <div className={styles.allLevels}>
+                    {/* <div className={styles.allLevels}> */}
                         <button className={styles.level} value="lvl1b" onClick={downloadPDF} >LVL 1</button>
                         <button className={styles.level} value="lvl2b" onClick={downloadPDF} >LVL 2</button>
                         <button className={styles.level} value="lvl3b" onClick={downloadPDF} >LVL 3</button>
                         <button className={styles.level} value="lvl4b" onClick={downloadPDF} >LVL 4</button>
-                    </div>
+                    {/* </div> */}
 
                     {/* <img className={styles.bird} src={bird} alt="Girl in a jacket"/> */}
 
+                    <div className={styles.float}>
 
-
-
-                </div>
-                <div className={styles.float}>
-                        <h2>Enter Keywords Here</h2>
-                        <input id='keyword' type="text" onChange={checkKeyword} placeholder="Enter Your Keyword to unlock next level"></input>
-                        <div id="keywordStatus">
+                        <input id='keyword' class={styles.keyword} type="text" onChange={checkKeyword} placeholder="Enter Keywords Here"></input>
+                        <div id="keywordStatus" className={styles.keywordStatus}>
 
                         </div>
                         <div id='unlockButton' className={styles.unlock}>
-                            <button onClick={unlockLevel} >Unlock Next Level</button>
+                            <button className={styles.unlockButton} onClick={unlockLevel} >Unlock Next Level</button>
                         </div>
                     </div>
+
+
+                </div>
+                <div id="alert" className={styles.alert}>
+                    {this.state.status}
+                    <box-icon className={styles.closeAlert} size="md" onClick={dismissAlert} name='right-arrow' type='solid' animation='fade-left-hover' color='aquamarine' ></box-icon>
+                    {/* <box-icon onClick={dismissAlert} name='right-arrow' type='solid' color='#0c0c0c' ></box-icon> */}
+                </div>
+
                 
             </div>
         )
