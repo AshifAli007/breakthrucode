@@ -11,6 +11,7 @@ class Main extends Component {
         )
         return (
             <div>
+                <h1>hii</h1>
                 {routes}
             </div>
         )
