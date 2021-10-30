@@ -150,18 +150,13 @@ class Event extends Component{
                     <button className={styles.level} value="lvl4a" onClick={downloadPDF} >LVL 4</button>
                 </div>
                 <div class={styles.pathB}>
-                    {/* <h2 className={styles.headingPathB}>Path B</h2> */}
+                    <h2 className={styles.headingPathB}>Path B</h2>
 
-                    {/* <img className={styles.giraffe} src={giraffe} alt="Girl in a jacket"/> */}
-                    {/* <div className={styles.allLevels}> */}
+               
                         <button className={styles.level} value="lvl1b" onClick={downloadPDF} >LVL 1</button>
                         <button className={styles.level} value="lvl2b" onClick={downloadPDF} >LVL 2</button>
                         <button className={styles.level} value="lvl3b" onClick={downloadPDF} >LVL 3</button>
                         <button className={styles.level} value="lvl4b" onClick={downloadPDF} >LVL 4</button>
-                    {/* </div> */}
-
-                    {/* <img className={styles.bird} src={bird} alt="Girl in a jacket"/> */}
-
                     <div className={styles.float}>
 
                         <input id='keyword' class={styles.keyword} type="text" onChange={checkKeyword} placeholder="Enter Keywords Here"></input>
