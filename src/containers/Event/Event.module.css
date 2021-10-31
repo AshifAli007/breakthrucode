@@ -262,7 +262,9 @@ html{
   }
   .pathB{
     column-gap: 10%;
-    background-position: 25% 15%, 20% 50%, 86% -5%;
+    background-size: auto, 260px, 90px;
+    /* background-position: 25% 15%, 20% 50%, 86% -5%; */
+    background-position: 25% 15%, 23% 38%, 86% -5%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -270,6 +272,7 @@ html{
     column-gap: 10%;
   }
   .pathB{
+    background-position: 25% 15%, 13% 50%, 86% -5%;
     column-gap: 10%;
   }
 }
@@ -295,6 +298,7 @@ html{
     background-position: 0% -5%,77% 123%, 130% 77%;
   }
   .pathB{
+    background-position: 25% 15%, 7% 50%, 86% -5%;
     padding-top: 10%;
     column-gap: 5%;
     height: calc(50 * var(--vh));
@@ -308,6 +312,7 @@ html{
     background-position: 0% -5%,right bottom, 93% 35%;
   }
   .pathB{
+    background-position: 25% 15%, 10% 50%, 86% -5%;
     padding-top: 15%;
     column-gap:  5%;
     height: calc(50 * var(--vh));
@@ -334,6 +339,7 @@ html{
     background-position: 0% -5%,right bottom, 93% 25%;
   }
   .pathB{
+    background-position: 25% 15%, 20% 50%, 90% -5%;
     padding: 0 15%;
     column-gap:  25%;
     height: calc(50 * var(--vh));
@@ -356,10 +362,11 @@ html{
     column-gap:  25%;
     padding: 0 15%;
     height: calc(50 * var(--vh));
-    background-size: 200px,200%, 152%;
-    background-position: 0% -5%,98% 181%, 93% -87%;
+    background-size: 200px,200%, 185%;
+    background-position: 0% -5%,right bottom, 73% 20%;
   }
   .pathB{
+    background-position: 25% 15%, 0% 50%, 95% -5%;
     padding: 0 15%;
     column-gap:  25%;
     height: calc(50 * var(--vh));
@@ -381,7 +388,7 @@ html{
   }
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:350px){
   .level{
     width:5rem;
     height:5rem;
