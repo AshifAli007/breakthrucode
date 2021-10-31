@@ -30,7 +30,7 @@ html{
   height: 7rem;
   border: unset;
   cursor: pointer;
-  margin-right: 12%;
+  margin-left: 12%;
   box-shadow: 0 5px 15px 0px rgba(5, 240, 248, 0.6);
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
@@ -259,7 +259,7 @@ html{
   .level{
     width:5rem;
     height:5rem;
-    margin-right:6%;
+    margin-left:6%;
   }
   .keyword{
     width: 70%;
@@ -304,7 +304,7 @@ html{
     font-size: 18px;
   }
   .level{
-    margin-right: 15%;
+    margin-left: 15%;
   }
 }
 
