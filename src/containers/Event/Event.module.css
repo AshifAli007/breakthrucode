@@ -30,7 +30,7 @@ html{
   height: 7rem;
   border: unset;
   cursor: pointer;
-  margin-left: 12%;
+  /* margin-left: 12%; */
   box-shadow: 0 5px 15px 0px rgba(5, 240, 248, 0.6);
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
@@ -259,7 +259,7 @@ html{
   .level{
     width:5rem;
     height:5rem;
-    margin-left:6%;
+    /* margin-left:6%; */
   }
   .keyword{
     width: 70%;
@@ -284,11 +284,15 @@ html{
 
 @media screen and (max-width:450px){
   .pathA{
+    column-gap:  25%;
+    padding: 0 15%;
     height: calc(50 * var(--vh));
     background-size: 200px,200%, 152%;
     background-position: 0% -5%,98% 181%, 93% -87%;
   }
   .pathB{
+    padding: 0 15%;
+    column-gap:  25%;
     height: calc(50 * var(--vh));
   }
   .unlockButton{
@@ -304,15 +308,15 @@ html{
     font-size: 18px;
   }
   .level{
-    margin-left: 15%;
+    /* margin-left: 15%; */
   }
 }
 
-@media screen and (max-width:340px){
+@media screen and (max-width:320px){
   .level{
     width:5rem;
     height:5rem;
-    margin-right:10%;
+    /* margin-right:10%; */
   }
   .keyword{
     width: 70%;
@@ -331,11 +335,14 @@ html{
     width: 60%;
   }
   .pathA{
+    column-gap:  10%;
+
     height: calc(50 * var(--vh));
     background-size: 200px,260%, 180%;
     background-position: 0% -5%,100% 300%, 68% -95%;
   }
   .pathB{
+    column-gap:  10%;
     height: calc(50 * var(--vh));
     background-position: 25% 15%, -16% 50%, 100% -8%;
     background-size: auto, 200px, 80px;
