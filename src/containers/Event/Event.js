@@ -8,16 +8,17 @@ import lvl1b from '../../assets/level1b.png';
 import lvl2b from '../../assets/level2b.pdf';
 import lvl3b from '../../assets/level3b.pdf';
 
+import segment1 from '../../assets/finalLvl/segment1.png';
+import segment2 from '../../assets/finalLvl/segment2.png';
+import segment3 from '../../assets/finalLvl/segment3.pdf';
 
 import 'boxicons';
-import giraffe from '../../assets/giraffe.png'
-import bird from '../../assets/bird.png';
 import styles from './Event.module.css';
 import $ from 'jquery';
 import keywords from '../../config/index.json';
 class Event extends Component{
     state = {
-        status: "Well Done! Bro you did it keep goingyou jsut unlocked next level",
+        status: "Well Done! Bro you did it keep going you jsut unlocked next level",
         showRules: false,
     }
     render(){
@@ -45,7 +46,14 @@ class Event extends Component{
             "lvl3b":lvl3b,
             "lvl4b":lvl4b
         }
-
+        let final = {
+            "lvl2a": segment1,
+            "lvl2b": segment1,
+            "lvl3a": segment2,
+            "lvl3b": segment2,
+            "lvl4a": segment3,
+            "lvl4b": segment3
+        }
         const downloadPDF = (e)=>{
             let levelLocked = true;
             let levels = JSON.parse(localStorage.getItem('userData'));
@@ -93,12 +101,16 @@ class Event extends Component{
                 console.log('level already unlocked');
                 this.setState({
                     status: 'Level Already Unlocked Enter Keyword For Next Level'
-                })
+                });
+                window.open(final[keywords[keyword]]);
             }else{
                 this.setState({
                     status: 'Well done! You did it next Level is Unlocked go check it out!'
                 })
                 levelsArray.push(keywords[keyword]);
+                console.log(final[keywords[keyword]]);
+                window.open(final[keywords[keyword]]);
+
             }
             let newLevels = {
                 levelsUnlocked: levelsArray,
