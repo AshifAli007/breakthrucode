@@ -155,7 +155,7 @@ class Event extends Component{
                     <h1>Instructions</h1>
                 </div>
                 <div className={styles.pathA}>
-                    <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#81958f' ></box-icon>
+                    <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#FFFFFF' ></box-icon>
                   
                     <div id="myModal" className={styles.modal}>
                         <div className={styles.modalContent}>
