@@ -16,6 +16,7 @@ body{
 }
 html{
   height: -webkit-fill-available;
+  height: 100%;
 }
 .main{
   width: 100%;
@@ -81,7 +82,7 @@ html{
   align-content: center;
   row-gap: 5%;
   width: 100%;
-  height:50vh;
+  height: calc(50 * var(--vh));
   background-color:#C6DEEC;
   /* background-image: linear-gradient(24deg,#D5EAF5, #F5DDDA); */
   background-image: url('../../assets/crane.png'), url('../../assets/winter.png'), url('../../assets/deer.png');
@@ -119,7 +120,7 @@ html{
   align-content:flex-start;
   row-gap: 5%;
   width: 100%;
-  height:50vh;
+  height: calc(50 * var(--vh));
   background:#24252A;
   background-image: url('../../assets/back2.png'), url('../../assets/giraffe.png'), url('../../assets/bird.png');
   background-repeat: no-repeat, no-repeat, no-repeat;

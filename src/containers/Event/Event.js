@@ -128,6 +128,16 @@ class Event extends Component{
                 $('#myModal').css('display', 'none');
             }
           }
+          window.addEventListener('resize', () => { 
+            document.querySelector(':root').style
+              .setProperty('--vh', window.innerHeight/100 + 'px');
+              console.log(window.innerHeight/100 + 'px')
+          })
+          $( document ).ready(function() {
+            console.log( "ready!" );
+            document.querySelector(':root').style
+            .setProperty('--vh', window.innerHeight/100 + 'px');
+        });
         return (
             <div id='main' className={styles.main}>
                 <div id="rules" className={styles.rules}>
