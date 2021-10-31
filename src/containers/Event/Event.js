@@ -108,7 +108,6 @@ class Event extends Component{
                     status: 'Well done! You did it next Level is Unlocked go check it out!'
                 })
                 levelsArray.push(keywords[keyword]);
-                console.log(final[keywords[keyword]]);
                 window.open(final[keywords[keyword]]);
 
             }
