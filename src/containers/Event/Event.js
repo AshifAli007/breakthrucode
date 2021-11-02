@@ -60,7 +60,7 @@ class Event extends Component{
         }
         const timeToLive = () =>{
             let today = new Date();
-            let endTime = new Date(2021, 10, 5, 10, 0, 0, 0);
+            let endTime = new Date(2021, 10, 6, 10, 0, 0, 0);
             console.log('endTime', endTime);
             let diffInMilliSecs = Date.parse(endTime) - today.getTime();
     
