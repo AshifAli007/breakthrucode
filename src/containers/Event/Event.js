@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import lvl1a from '../../assets/level1a.png';
-import lvl2a from '../../assets/level2a.pdf';
-import lvl3a from '../../assets/level3a.pdf';
+import lvl1a from '../../assets/levels/level1a.png';
+import lvl2a from '../../assets/levels/level2a.pdf';
+import lvl3a from '../../assets/levels/level3a.zip';
+import lvl4a from '../../assets/levels/level4a.pdf';
 
-import lvl1b from '../../assets/level1b.png';
-import lvl2b from '../../assets/level2b.pdf';
-import lvl3b from '../../assets/level3b.pdf';
+import lvl1b from '../../assets/levels/level1b.zip';
+import lvl2b from '../../assets/levels/level2b.pdf';
+import lvl3b from '../../assets/levels/level3b.pdf';
+import lvl4b from '../../assets/levels/level4b.png';
 
 import segment1 from '../../assets/finalLvl/segment1.png';
 import segment2 from '../../assets/finalLvl/segment2.png';
-import segment3 from '../../assets/finalLvl/segment3.pdf';
+import segment3 from '../../assets/finalLvl/segment3.png';
+import segment4 from '../../assets/finalLvl/segment4.pdf';
 
 import 'boxicons';
 import styles from './Event.module.css';
@@ -34,8 +37,7 @@ class Event extends Component{
             console.log('storage already there');
             localStorage.setItem('userData', JSON.stringify(data));
         }
-        let lvl4a = "https://forms.gle/jGYquNCm4h9ftTmE8";
-        let lvl4b = "https://forms.gle/fgEtbCMe5D1Pa3eH8"; 
+ 
         let obj = {
             "lvl1a":lvl1a,
             "lvl2a":lvl2a,
@@ -52,7 +54,8 @@ class Event extends Component{
             "lvl3a": segment2,
             "lvl3b": segment2,
             "lvl4a": segment3,
-            "lvl4b": segment3
+            "lvl4b": segment3,
+            "final": segment4
         }
         const downloadPDF = (e)=>{
             let levelLocked = true;

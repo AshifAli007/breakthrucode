@@ -1,9 +1,11 @@
 {
-    "unlockLevel2a": "lvl2a",
-    "unlockLevel3a": "lvl3a",
-    "unlockLevel4a": "lvl4a",
+    "2stage2": "lvl2a",
+    "15427": "lvl3a",
+    "qrchlgcod": "lvl4a",
+    "1000010001010": "final",
 
-    "unlockLevel2b": "lvl2b",
-    "unlockLevel3b": "lvl3b",
-    "unlockLevel4b": "lvl4b"
+    "qrchlgcod1": "lvl2b",
+    "10101100011010111010": "lvl3b",
+    "4771579267891234": "lvl4b",
+    "1up": "final"
 }
