@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Timer from '../../components/CountDownTimer/CountDownTimer';
 import styles from './choices.module.css';
 

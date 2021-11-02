@@ -7,8 +7,8 @@ class Main extends Component {
     render(){
         let routes = (
             <Switch>
-                {/* <Route path="/event" component={Event}/> */}
-                <Route path="/choices" component={Choices}/>
+                <Route path="/event" component={Event}/>
+                <Route path="/" component={Choices}/>
             </Switch>
         )
         return (
