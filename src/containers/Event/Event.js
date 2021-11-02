@@ -16,6 +16,7 @@ import segment3 from '../../assets/finalLvl/segment3.png';
 import segment4 from '../../assets/finalLvl/segment4.pdf';
 
 import 'boxicons';
+import Timer from '../../components/CountDownTimer/CountDownTimer';
 import styles from './Event.module.css';
 import $ from 'jquery';
 import keywords from '../../config/index.json';
@@ -56,6 +57,26 @@ class Event extends Component{
             "lvl4a": segment3,
             "lvl4b": segment3,
             "final": segment4
+        }
+        const timeToLive = () =>{
+            let today = new Date();
+            let endTime = new Date(2021, 10, 5, 10, 0, 0, 0);
+            console.log('endTime', endTime);
+            let diffInMilliSecs = Date.parse(endTime) - today.getTime();
+    
+            let days = Math.floor(diffInMilliSecs/(1000*60*60*24));
+            let hours = Math.floor((diffInMilliSecs/(1000*60*60))%24);
+            let minutes = Math.floor((diffInMilliSecs/(1000*60))%60);
+            let seconds = Math.floor((diffInMilliSecs/(1000))%60);
+            
+            let timeToLive = {
+                days: days,
+                hours: hours,
+                minutes: minutes,
+                seconds:seconds
+            }
+            console.log(timeToLive);
+            return timeToLive;
         }
         const downloadPDF = (e)=>{
             let levelLocked = true;
@@ -154,6 +175,10 @@ class Event extends Component{
         });
         return (
             <div id='main' className={styles.main}>
+                <div onClick={timeToLive} class={styles.timer}>
+                    Stay Tuned Event Will Be&nbsp;
+                    <Timer hoursMinSecs={timeToLive()}></Timer>
+                </div>
                 <div id="rules" className={styles.rules}>
                     <h1>Instructions</h1>
                 </div>
