@@ -1,5 +1,6 @@
 {
   "name": "breakthrucode",
+  "homepage": "http://dduc.acm.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
