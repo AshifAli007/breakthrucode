@@ -175,10 +175,7 @@ class Event extends Component{
         });
         return (
             <div id='main' className={styles.main}>
-                <div onClick={timeToLive} class={styles.timer}>
-                    Stay Tuned Event Will Be&nbsp;
-                    <Timer hoursMinSecs={timeToLive()}></Timer>
-                </div>
+                
                 <div id="rules" className={styles.rules}>
                     <h1>Instructions</h1>
                 </div>
