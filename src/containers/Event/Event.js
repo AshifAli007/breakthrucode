@@ -156,7 +156,7 @@ class Event extends Component{
             <div id='main' className={styles.main}>
                 
                 <div id="rules" className={styles.rules}>
-                    <h1 class={styles.eventName}>Choicess</h1>
+                    <h1 class={styles.eventName}>Choices</h1>
                     <p className={styles.instruction}>Hello folks, ACM-DDUC chapter welcomes you to the first event of the session✨.<br/><br/>
                     The clock is ticking ⏰ ,so lets cut to the chase. Two hours  Four levels, Two paths. Tread on whichever road you choose, solve the puzzles, decrypt the codes, unjumble the jumbled and along your way keep collecting the tokens we give , as these might open up the door to Narnia🎀 or maybe even to the Final Level !!..who knows ?👀 <br/><br/>
                     And what about the Keywords you get on solving each level? Well they’ll all fit right into the input box given at the bottom.<br/><br/>
