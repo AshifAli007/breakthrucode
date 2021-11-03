@@ -15,6 +15,7 @@ import segment2 from '../../assets/finalLvl/segment2.png';
 import segment3 from '../../assets/finalLvl/segment3.png';
 import segment4 from '../../assets/finalLvl/segment4.pdf';
 
+import link from '../../config/winner';
 import 'boxicons';
 import styles from './Event.module.css';
 import $ from 'jquery';
@@ -27,7 +28,7 @@ class Event extends Component{
     render(){
         
             
-        
+        // var link = "https://chat.whatsapp.com/KHbsaOHGaa99JdcI0Gxmbs";
         let userData = localStorage.getItem('userData');
         console.log(keywords);
         if(!userData){
@@ -55,7 +56,8 @@ class Event extends Component{
             "lvl3b": segment2,
             "lvl4a": segment3,
             "lvl4b": segment3,
-            "final": segment4
+            "final": segment4,
+            "winner": link
         }
         const downloadPDF = (e)=>{
             let levelLocked = true;
@@ -153,6 +155,12 @@ class Event extends Component{
             console.log( "ready!" );
             document.querySelector(':root').style
             .setProperty('--vh', window.innerHeight/100 + 'px');
+            let levels = JSON.parse(localStorage.getItem('userData'));
+            console.log(levels['levelsUnlocked']);
+            levels['levelsUnlocked'].map((lvl)=>{
+                $('[value='+lvl+']').addClass(styles.unlocked);
+            }); 
+
         });
         return (
             <div id='main' className={styles.main}>

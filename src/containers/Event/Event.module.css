@@ -129,7 +129,7 @@ button.unlocked{
 
 }
 .developer{
-  font-size: 12px;
+  font-size: 13px;
   position: absolute;
   bottom: 0;
   right: 10%;
@@ -291,6 +291,12 @@ button.unlocked{
     background-size: auto, 260px, 90px;
     /* background-position: 25% 15%, 20% 50%, 86% -5%; */
     background-position: 25% 15%, 23% 38%, 86% -5%;
+  }
+  .rules{
+    padding: 0 20%;
+  }
+  .instruction{
+    font-size:19px;
   }
 }
 @media screen and (max-width: 1200px) {
