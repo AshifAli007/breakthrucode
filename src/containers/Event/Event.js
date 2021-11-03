@@ -156,7 +156,16 @@ class Event extends Component{
             <div id='main' className={styles.main}>
                 
                 <div id="rules" className={styles.rules}>
-                    <h1>Instructions</h1>
+                    <h1 class={styles.eventName}>Choices</h1>
+                    <p className={styles.instruction}>Hello folks, ACM-DDUC chapter welcomes you to the first event of the session✨.<br/><br/>
+                    The clock is ticking ⏰ ,so lets cut to the chase. Two hours  Four levels, Two paths. Tread on whichever road you choose, solve the puzzles, decrypt the codes, unjumble the jumbled and along your way keep collecting the tokens we give , as these might open up the door to Narnia🎀 or maybe even to the Final Level !!..who knows ?👀 <br/><br/>
+                    And what about the Keywords you get on solving each level? Well they’ll all fit right into the input box given at the bottom.<br/><br/>
+                    Keep your calm as the questions might shake you off yet hurry because the timer doesn’t stop for you !!
+                    If you’re able to answer every question we throw at you, Voila !! you win the prize, but only if you’re the first or second one to do so , tough times eh ? <br/><br/>
+                    Anyways, now go and solve ‘em all !
+                    </p>
+
+                    <p className={styles.developer}>Developed By Mohd Ashif</p>
                 </div>
                 <div className={styles.pathA}>
                     <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#FFFFFF' ></box-icon>
@@ -198,7 +207,6 @@ class Event extends Component{
                 <div id="alert" className={styles.alert}>
                     {this.state.status}
                     <box-icon className={styles.closeAlert} size="md" onClick={dismissAlert} name='right-arrow' type='solid' animation='fade-left-hover' color='aquamarine' ></box-icon>
-                    {/* <box-icon onClick={dismissAlert} name='right-arrow' type='solid' color='#0c0c0c' ></box-icon> */}
                 </div>
 
                 

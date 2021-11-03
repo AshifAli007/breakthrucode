@@ -18,6 +18,9 @@ html{
   height: -webkit-fill-available;
   height: 100%;
 }
+.eventName{
+  text-shadow: 0 0 10px rgb(255, 217, 0);
+}
 .main{
   width: 100%;
   height: 100%;
@@ -86,7 +89,6 @@ html{
   width: 100%;
   height: 50vh;
   background-color:#C6DEEC;
-  /* background-image: linear-gradient(24deg,#D5EAF5, #F5DDDA); */
   background-image: url('../../assets/img/crane.png'), url('../../assets/img/winter.png'), url('../../assets/img/deer.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 200px,cover, 80%;
@@ -113,6 +115,19 @@ html{
   border-radius: 0 0 10% 10%;
   z-index: 3;
   text-align: center;
+  padding: 0 5%;
+}
+.instruction{
+  margin-top: 10%;
+  font-size:18px;
+  text-shadow: 0 0 3px rgb(0, 195, 255);
+}
+.developer{
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  text-shadow: 0 0 10px rgb(0, 255, 0);
 }
 /* -------------------------    PATH B CSS   -------------------------------------------- */
 .pathB{
@@ -280,6 +295,12 @@ html{
     background-position: 25% 15%, 13% 50%, 86% -5%;
     column-gap: 10%;
   }
+  .rules{
+    padding: 0 15%;
+  }
+  .instruction{
+    font-size:18px;
+  }
 }
 @media screen and (max-width:750px){
   .level{
@@ -308,6 +329,12 @@ html{
     column-gap: 5%;
     height: calc(50 * var(--vh));
   }
+  .rules{
+    padding: 0 10%;
+  }
+  .instruction{
+    font-size:18px;
+  }
 }
 @media screen and (max-width:650px){
   .pathA{
@@ -333,6 +360,12 @@ html{
   .keyword{
     width: 60%;
     font-size: 18px;
+  }
+  .instruction{
+    font-size: 18px;
+  }
+  .rules{
+    padding: 0 5%;
   }
 }
 @media screen and (max-width:550px){
@@ -361,6 +394,12 @@ html{
     width: 60%;
     font-size: 18px;
   }
+  .instruction{
+    font-size: 17px;
+  }
+  .rules{
+    padding: 0 5%;
+  }
 }
 @media screen and (max-width:450px){
   .pathA{
@@ -388,8 +427,11 @@ html{
     width: 60%;
     font-size: 18px;
   }
-  .level{
-    /* margin-left: 15%; */
+  .instruction{
+    font-size: 16px;
+  }
+  .rules{
+    padding: 0 5%;
   }
 }
 
@@ -427,5 +469,11 @@ html{
     height: calc(50 * var(--vh));
     background-position: 25% 15%, -16% 50%, 100% -8%;
     background-size: auto, 200px, 80px;
+  }
+  .instruction{
+    font-size: 16px;
+  }
+  .rules{
+    padding: 0 5%;
   }
 }
