@@ -21,6 +21,9 @@ html{
 .eventName{
   text-shadow: 0 0 10px rgb(255, 217, 0);
 }
+button.unlocked{
+  color: rgb(221,128, 205);
+}
 .main{
   width: 100%;
   height: 100%;
@@ -33,6 +36,7 @@ html{
   height: 7rem;
   border: unset;
   cursor: pointer;
+  color: #115677;
   /* margin-left: 12%; */
   box-shadow: 0 5px 15px 0px rgba(5, 240, 248, 0.6);
 	transform: translatey(0px);

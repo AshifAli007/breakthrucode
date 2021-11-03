@@ -111,6 +111,8 @@ class Event extends Component{
                     status: 'Well done! You did it next Level is Unlocked go check it out!'
                 })
                 levelsArray.push(keywords[keyword]);
+                $('[value='+keywords[keyword]+']').addClass(styles.unlocked);
+                console.log('[value='+keywords[keyword]+']', $('[value='+keywords[keyword]+']'));
                 window.open(final[keywords[keyword]]);
 
             }
@@ -178,7 +180,7 @@ class Event extends Component{
 
                     </div>
                     <h2 className={styles.headingPathA}>Path A</h2>
-                    <button className={styles.level} value="lvl1a" onClick={downloadPDF} >LVL 1</button>
+                    <button className={styles.level+" " +styles.unlocked} value="lvl1a" onClick={downloadPDF} >LVL 1</button>
                     <button className={styles.level} value="lvl2a" onClick={downloadPDF} >LVL 2</button>
                     <button className={styles.level} value="lvl3a" onClick={downloadPDF} >LVL 3</button>
                     <button className={styles.level} value="lvl4a" onClick={downloadPDF} >LVL 4</button>
@@ -187,7 +189,7 @@ class Event extends Component{
                     <h2 className={styles.headingPathB}>Path B</h2>
 
                
-                        <button className={styles.level} value="lvl1b" onClick={downloadPDF} >LVL 1</button>
+                        <button className={styles.level+" "+styles.unlocked} value="lvl1b" onClick={downloadPDF} >LVL 1</button>
                         <button className={styles.level} value="lvl2b" onClick={downloadPDF} >LVL 2</button>
                         <button className={styles.level} value="lvl3b" onClick={downloadPDF} >LVL 3</button>
                         <button className={styles.level} value="lvl4b" onClick={downloadPDF} >LVL 4</button>
