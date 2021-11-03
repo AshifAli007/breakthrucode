@@ -412,6 +412,9 @@ button.unlocked{
   .rules{
     padding: 0 4%;
   }
+  .developer{
+    font-size: 12px;
+  }
 }
 @media screen and (max-width:450px){
   .pathA{
@@ -444,6 +447,9 @@ button.unlocked{
   }
   .rules{
     padding: 0 1%;
+  }
+  .developer{
+    font-size: 12px;
   }
 }
 
@@ -487,5 +493,8 @@ button.unlocked{
   }
   .rules{
     padding: 0 1%;
+  }
+  .developer{
+    font-size: 12px;
   }
 }
