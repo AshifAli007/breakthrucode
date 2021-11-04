@@ -22,7 +22,7 @@ import $ from 'jquery';
 import keywords from '../../config/index.json';
 class Event extends Component{
     state = {
-        status: "Well Done! Bro you did it keep going you jsut unlocked next level",
+        status: "NAN",
         showRules: false,
     }
     render(){
@@ -81,7 +81,7 @@ class Event extends Component{
             if(e.target.value in keywords){
                 console.log('hey there');
                 $("#unlockButton").css('display', 'flex');
-                $("#keywordStatus").html("Nice this is the keyword");
+                $("#keywordStatus").html("Great! You found the keyword");
             }else{
                 console.log('try again');
                 $("#unlockButton").css('display', 'none');
@@ -103,12 +103,12 @@ class Event extends Component{
             if(levelsArray.includes(keywords[keyword])) {
                 console.log('level already unlocked');
                 this.setState({
-                    status: 'Level Already Unlocked Enter Keyword For Next Level'
+                    status: 'Keyword Already used Keyword For Next Level'
                 });
                 window.open(final[keywords[keyword]]);
             }else{
                 this.setState({
-                    status: 'Well done! You did it next Level is Unlocked go check it out!'
+                    status: `Well Played! you unlocked the next level and earned a segment, keep collecting the segments by unlocking levels! now click on unlocked level to continue`
                 })
                 levelsArray.push(keywords[keyword]);
                 $('[value='+keywords[keyword]+']').addClass(styles.unlocked);
@@ -176,12 +176,12 @@ class Event extends Component{
                     <p className={styles.developer}>Developed By Mohd Ashif</p>
                 </div>
                 <div className={styles.pathA}>
-                    <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#FFFFFF' ></box-icon>
+                    <box-icon onClick={showRules} size='md' animation="tada-hover" name='grid-alt' type='solid' color='#fbff97' ></box-icon>
                   
                     <div id="myModal" className={styles.modal}>
                         <div className={styles.modalContent}>
                         <span onClick={closeModal} className={styles.close}>&times;</span>
-                        <p>Complete Previous Levels to Unlock this level.</p>
+                        <p>Complete Previous Level to get the keyword you need to unlock this level.</p>
                         </div>
 
                     </div>

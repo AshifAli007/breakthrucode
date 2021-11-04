@@ -126,7 +126,9 @@ button.unlocked{
   font-size:18px;
   text-shadow: 0 0 3px rgb(0, 195, 255);
   transition: all 2s ease-in-out;
-
+  font-style: italic;
+  font-weight: 800;
+  font-family: auto;
 }
 .developer{
   font-size: 13px;
@@ -166,6 +168,9 @@ button.unlocked{
   height: 15%;
 }
 .modal {
+  text-align: center;
+  color:#af18e7;
+  box-shadow: 0 0 10px pink;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
