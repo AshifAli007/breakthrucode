@@ -124,7 +124,7 @@ button.unlocked{
 .instruction{
   margin-top: 10%;
   font-size:18px;
-  text-shadow: 0 0 3px rgb(0, 195, 255);
+  text-shadow: 0 0 1px rgb(51, 255, 0);
   transition: all 2s ease-in-out;
   font-style: italic;
   font-weight: 800;
