@@ -163,7 +163,7 @@ class Event extends Component{
         return (
             <div id='main' className={styles.main}>
                     <div class={styles.timer}>
-                    Thank You For your participations! <br/>
+                    Event has Ended! Thank You For your participations.  <br/>
                     Certificates will be available at <br/> http://dduc.acm.org/admin/certificate.php
                     
                 </div>

@@ -135,7 +135,7 @@ button.unlocked{
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 2rem;
   color: rgb(231, 233, 222);
-  text-shadow: 0 0 10px blue;
+  text-shadow: 0 0 10px rgb(0, 174, 255);
 }
 .instruction{
   margin-top: 10%;
