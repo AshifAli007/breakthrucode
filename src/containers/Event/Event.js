@@ -162,7 +162,11 @@ class Event extends Component{
         });
         return (
             <div id='main' className={styles.main}>
-                
+                    <div class={styles.timer}>
+                    Thank You For your participations! <br/>
+                    Certificates will be available at <br/> http://dduc.acm.org/admin/certificate.php
+                    
+                </div>
                 <div id="rules" className={styles.rules}>
                     <h1 class={styles.eventName}>Choices</h1>
                     <p className={styles.instruction}>Hello folks, ACM-DDUC chapter welcomes you to the first event of the session✨.<br/><br/>
@@ -170,7 +174,7 @@ class Event extends Component{
                     And what about the Keywords you get on solving each level? Well they’ll all fit right into the input box given at the bottom.<br/><br/>
                     Keep your calm as the questions might shake you off yet hurry because the time doesn’t stop for you !!
                     If you’re able to answer every question we throw at you, Voila !! you win the prize, but only if you’re the first or second one to do so , tough times eh ? <br/><br/>
-                    Anyways, now go and solve ‘em all ! <br> Got All the segments? Now code it and type in the key!
+                    Anyways, now go and solve ‘em all ! <br/> Got All the segments? Now code it and type in the key!
                     </p>
 
                     <p className={styles.developer}>Developed By Mohd Ashif</p>

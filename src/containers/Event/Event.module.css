@@ -121,6 +121,22 @@ button.unlocked{
   text-align: center;
   padding: 0 5%;
 }
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  color: rgb(231, 233, 222);
+  text-shadow: 0 0 10px blue;
+}
 .instruction{
   margin-top: 10%;
   font-size:18px;
