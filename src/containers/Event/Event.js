@@ -22,7 +22,11 @@ import $ from 'jquery';
 import keywords from '../../config/index.json';
 class Event extends Component{
     state = {
+<<<<<<< HEAD
         status: "NAN",
+=======
+        status: "Well Done!!!!!!! Bro you  fdfadfadfdf did it keep going you jsut unlocked next level",
+>>>>>>> annie
         showRules: false,
     }
     render(){
